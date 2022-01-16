@@ -15,10 +15,9 @@ function generate(schema: any): any {
       }
     }
   }
-  
-  const version = "v1.16.1"
+
   const schemaUrl =
-    `https://deno.land/x/deno@${version}/cli/schemas/config-file.v1.json`;
+    `https://deno.land/x/deno@v${Deno.version.deno}/cli/schemas/config-file.v1.json`;
   const response = await fetch(schemaUrl);
   const schema = await response.json();
   const configFile = "deno.json";
